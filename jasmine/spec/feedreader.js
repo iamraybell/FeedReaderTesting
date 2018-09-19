@@ -32,6 +32,22 @@ $(function() {
          * and that the URL is not empty.
          */
 
+         it('has a url', function(){
+            allFeeds.forEach(function(item){
+                expect(item.url).toBeDefined();
+                expect(item.url.length).not.toBe(0);
+            })
+         })
+
+
+        it('has a name', function(){
+            allFeeds.forEach(function(item){
+                expect(item.name).toBeDefined();
+                expect(item.name.length).not.toBe(0);
+
+            })
+         })
+
 
         /* TODO: Write a test that loops through each feed
          * in the allFeeds object and ensures it has a name defined
@@ -39,6 +55,8 @@ $(function() {
          */
     });
 
+
+    describe('The menu')
 
     /* TODO: Write a new test suite named "The menu" */
 
