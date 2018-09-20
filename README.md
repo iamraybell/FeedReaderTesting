@@ -16,7 +16,6 @@ Whether you work in an organization that uses test-driven development or in an o
 * Dom Manipulation
 * Working with a pre-existing application.
 
-
 # Steps needed to complete project
 
 - [x] Take the JavaScript Testing [course](https://www.udacity.com/course/ud549)
