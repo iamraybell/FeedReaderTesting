@@ -56,7 +56,29 @@ $(function() {
     });
 
 
-    describe('The menu')
+    describe('The menu', function(){
+        var menu;
+
+        beforeEach(function(){
+            menu = $('.slide-menu');
+            console.log($('.slide-menu').offset());
+        })
+
+        it('should start hidden', function(){
+            expect(menu.offset().left).toBe(-192);
+        })
+
+        it('should change visibility correctly', function(){
+            var body = $('body');
+            var menuIcon = $('.menu-icon-link');
+            menuIcon.trigger('click');
+            expect(body.attr('class')).not.toContain('menu-hidden');
+            menuIcon.trigger('click');
+            expect(body.attr('class')).toContain('menu-hidden');
+        })
+    })
+
+    // describe('Initial')
 
     /* TODO: Write a new test suite named "The menu" */
 
