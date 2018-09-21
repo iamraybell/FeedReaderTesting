@@ -16,6 +16,18 @@ Whether you work in an organization that uses test-driven development or in an o
 * Dom Manipulation
 * Working with a pre-existing application.
 
+##Technologies Used
+* Jasmine
+* JQuery
+* HTML5
+* CSS
+
+
+##How to run the Project
+	Clone the repository using git clone https://github.com/aayusharora/Feed-Reader-Testing.git
+	Open index.html in your browser.
+
+
 # Steps needed to complete project
 
 - [x] Take the JavaScript Testing [course](https://www.udacity.com/course/ud549)

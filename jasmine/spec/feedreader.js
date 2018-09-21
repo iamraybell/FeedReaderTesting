@@ -48,18 +48,17 @@ $(function() {
     /*This this the menu
     */
     describe('The menu', function(){
-        var menu;
+        var body;
 
         beforeEach(function(){
-            menu = $('.slide-menu');
-            console.log($('.slide-menu').offset());
+            body = $('body');
         })
 
         /* This ensures the menu element is
          * hidden by default.
          */
         it('should start hidden', function(){
-            expect(menu.offset().left).toBe(-192);
+            expect(body.attr('class')).toContain('menu-hidden');
         })
 
          /* This ensures the menu changes
@@ -92,8 +91,9 @@ $(function() {
          */
 
         it('contains a entry', function(done){
-            var container = $('.feed');
-            expect(container.html().length).not.toBe(0);
+            var entries = $('.feed .entry');
+             console.log(entries.length)
+            expect(entries.html().length).not.toBe(0);
             done();
         })
     })
@@ -102,16 +102,15 @@ $(function() {
     describe('New Feed Selection', function(){
         var startId  = 0;
         var oldEntries;
+        var newEntries;
         beforeEach(function(done){
             loadFeed(startId, function(){
                 oldEntries = $('.feed').html();
-                done();
-            })
-        })
-        beforeEach(function(done){
-            loadFeed(startId+1, function(){
+
+                loadFeed(startId+1, function(){
                 newEntries = $('.feed').html();
                 done();
+                })
             })
         })
 
